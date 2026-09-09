@@ -24,3 +24,17 @@
 @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+/* ── Chilli-paste scrollbar (brand: #f97316 → #ef4444 → #e11d48) ─────────── */
+* { scrollbar-width: thin; scrollbar-color: #ef4444 #0b0503; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: #0b0503; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f97316, #ef4444 55%, #e11d48);
+  border-radius: 8px;
+  border: 2px solid #0b0503;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fb923c, #f87171 55%, #f43f5e);
+}
+::-webkit-scrollbar-corner { background: #0b0503; }

@@ -1,0 +1,21 @@
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & temp
+*.log
+tmp/
+temp/
+*.tmp
+
+# Env / secrets (none used, safety net)
+.env
+.env.*

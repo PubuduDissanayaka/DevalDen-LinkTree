@@ -16,3 +16,11 @@
   animation-fill-mode: both;
   animation-timing-function: ease-out;
 }
+
+/* Scrolling brand marquee */
+.marquee { overflow: hidden; position: relative; background: rgba(20, 9, 6, 0.55); border-top: 1px solid rgba(245, 158, 11, 0.16); border-bottom: 1px solid rgba(245, 158, 11, 0.16); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.marquee-track { display: flex; width: max-content; animation: marqueeScroll 28s linear infinite; }
+.marquee-group { display: inline-flex; align-items: center; white-space: nowrap; padding: 0.55rem 0 0.55rem 2.5rem; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; color: rgba(251, 191, 36, 0.72); }
+@keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
